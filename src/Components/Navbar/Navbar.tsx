@@ -23,23 +23,23 @@ export function Navbar() {
           </div>
           <div className={active}>
             <ul className="navLists flex">
-              <li className="navItem">
-                <a href="#" className='navLink'>Home</a>
+              <li onClick={removeNav} className="navItem">
+                <a href="#home" className='navLink'>Home</a>
               </li>
 
-              <li className="navItem">
+              <li onClick={removeNav} className="navItem">
                 <a href="#" className='navLink'>Products</a>
               </li>
 
-              <li className="navItem">
+              <li onClick={removeNav} className="navItem">
                 <a href="#" className='navLink'>Resources</a>
               </li>
 
-              <li className="navItem">
+              <li onClick={removeNav} className="navItem">
                 <a href="#" className='navLink'>Contact</a>
               </li>
 
-              <li className="navItem">
+              <li onClick={removeNav} className="navItem">
                 <a href="#" className='navLink'>Blog</a>
               </li>
 

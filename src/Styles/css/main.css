@@ -127,7 +127,7 @@ input {
     background: var(--WhiteColorDeam);
     position: absolute;
     height: max-content;
-    padding: 1rem;
+    padding: 1rem 1rem 2.5rem 1rem;
     width: 100%;
     top: 0;
     left: -500%;
@@ -146,17 +146,20 @@ input {
   }
   .navBarSection .navBar .navLists .navItem .navLink {
     color: var(--TextColor);
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 600;
   }
   .navBarSection .navBar .navLists .navItem .navLink:hover {
     color: var(--PrimaryColor);
   }
   .navBarSection .navBar .navLists .headerBtns {
+    width: 100%;
     flex-direction: column;
   }
   .navBarSection .navBar .navLists .headerBtns .btn {
-    margin-top: 1rem;
+    width: 70%;
+    margin-top: 1.6rem;
+    padding: 0.7rem;
   }
   .navBarSection .navBar .navLists .headerBtns .btn a {
     font-weight: 600;
