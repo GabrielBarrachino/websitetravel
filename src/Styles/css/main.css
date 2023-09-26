@@ -18,6 +18,10 @@
   --InputColor: hsl(330, 12%, 97%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -165,6 +169,7 @@ input {
   padding: 0.625rem;
   font-size: 0.813rem;
   font-weight: 500;
+  transition: 0.1s ease;
 }
 .home .secContainer .homeCard .locationDiv input::placeholder, .home .secContainer .homeCard .distDiv input::placeholder, .home .secContainer .homeCard .priceDiv input::placeholder {
   font-size: 0.813rem;
@@ -172,7 +177,7 @@ input {
   font-weight: 400;
 }
 .home .secContainer .homeCard .locationDiv input:focus, .home .secContainer .homeCard .distDiv input:focus, .home .secContainer .homeCard .priceDiv input:focus {
-  outline: none;
+  border-color: var(--PrimaryColor);
 }
 .home .secContainer .homeCard .btn {
   width: 100%;
@@ -192,7 +197,7 @@ input {
   z-index: 1000;
 }
 .navBarSection .header .logoDiv .logo {
-  color: var(--PrimaryColor);
+  color: var(--WhiteColor);
   font-weight: 500;
   cursor: pointer;
   align-items: center;
@@ -201,6 +206,7 @@ input {
 .navBarSection .header .logoDiv .logo .icon {
   color: var(--PrimaryColor);
   font-size: 1.563rem;
+  margin-right: 0.5rem;
 }
 @media screen and (max-width: 768px) {
   .navBarSection .navBar {
@@ -274,6 +280,10 @@ input {
     left: 0;
   }
 }
+.navBarSection .activeHeader {
+  background: var(--GreyText);
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.45);
+}
 
 .toggleNavbar .icon {
   font-size: 25px;
@@ -281,4 +291,145 @@ input {
 }
 .toggleNavbar .icon:hover {
   color: var(--PrimaryColor);
+}
+
+.popular {
+  padding-top: 15rem;
+}
+.popular .secContainer .secHeader {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.popular .secContainer .secHeader .textDiv .secTitle {
+  color: var(--BlackColor);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.popular .secContainer .secHeader .textDiv p {
+  font-size: 0.813rem;
+  color: var(--TextColor);
+  font-weight: 500;
+}
+.popular .secContainer .secHeader .iconsDiv {
+  gap: 0.5rem;
+}
+.popular .secContainer .secHeader .iconsDiv .icon {
+  padding: 0.5rem;
+  background: var(--GreyText);
+  border-radius: 50%;
+  font-size: 2.5rem;
+}
+.popular .secContainer .secHeader .iconsDiv .icon:hover {
+  background: var(--BlackColor);
+  color: var(--WhiteColor);
+}
+.popular .secContainer .secHeader .iconsDiv .leftIcon {
+  background: var(--BlackColor);
+  color: var(--WhiteColor);
+}
+.popular .secContainer .secHeader .iconsDiv .leftIcon:hover {
+  background: var(--GreyText);
+  color: var(--BlackColor);
+}
+.popular .secContainer .mainContent {
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.popular .secContainer .mainContent .singleDestination {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+.popular .secContainer .mainContent .singleDestination .destImage {
+  height: 12.5rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.popular .secContainer .mainContent .singleDestination .destImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.846), rgba(0, 0, 0, 0.759));
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo h3 {
+  color: var(--WhiteColor);
+  font-weight: 600;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo p {
+  color: var(--WhiteColor);
+  opacity: 0.7;
+  font-size: 0.813rem;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo .icon {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.625rem;
+  padding: 0.5rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background: var(--PrimaryColor);
+  color: var(--WhiteColor);
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo .icon:hover {
+  border-color: var(--PrimaryColor);
+  background: var(--BlackColor);
+  color: var(--PrimaryColor);
+}
+.popular .secContainer .mainContent .singleDestination .destFooter {
+  padding: 1rem;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--BlackColor);
+  position: relative;
+  width: max-content;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .number::after {
+  content: "";
+  position: absolute;
+  background: var(--PrimaryColor);
+  top: 45%;
+  right: -150%;
+  height: 0.313rem;
+  width: 2.813rem;
+  border-radius: 1rem;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .destText {
+  justify-content: space-between;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .destText h6 {
+  color: var(--BlackColor);
+  font-size: 0.938rem;
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .destText .flex {
+  font-size: 1rem;
+  font-weight: 600;
+  align-items: flex-start;
+  transform: translateY(0.313rem);
+}
+.popular .secContainer .mainContent .singleDestination .destFooter .destText .flex .icon {
+  color: var(--PrimaryColor);
+}
+.popular .secContainer .mainContent .singleDestination:hover .overlayInfo {
+  overflow: visible;
+  padding: 1rem 1.5rem;
+  height: 100%;
 }

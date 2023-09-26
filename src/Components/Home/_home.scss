@@ -62,13 +62,14 @@
                     padding: 0.625rem;
                     font-size: .813rem;
                     font-weight: 500;
+                    transition: .1s ease;
                     &::placeholder{
                         font-size: .813rem;
                         opacity: .5;
                         font-weight: 400;
                     }
                     &:focus{
-                        outline: none;
+                        border-color: var(--PrimaryColor);
                     }
                 }
             }
