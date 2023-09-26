@@ -96,3 +96,13 @@
         }
     }
 }
+
+.toggleNavbar{
+    .icon{
+        font-size: 25px;
+        color: var(--WhiteColor);
+        &:hover{
+            color: var(--PrimaryColor)
+        }
+    }
+}
