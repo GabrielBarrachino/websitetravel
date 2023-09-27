@@ -1,0 +1,97 @@
+.offer{
+    .secContainer{
+        .mainContent{
+            gap: 1rem;
+            .singleOffer{
+                border-radius: 1rem;
+                overflow: hidden;
+                padding: .5rem;
+                box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.189);
+                transition: .3s ease;
+                .icon{
+                    font-size: 1.25rem;
+                    color: var(--TextColor);
+                }
+
+                small{
+                    font-weight: 500;
+                    color: var(--TextColor);
+                }
+
+                .destImage{
+                    position: relative;
+                    height: 12.5rem;
+                    width: 100%;
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    img{
+                        object-fit: cover;
+                        height: 100%;
+                    }
+
+                    .discount{
+                        position: absolute;
+                        top: .625rem;
+                        right: .625rem;
+                        padding: .313rem .625rem;
+                        background: var(--PrimaryColor);
+                        border-radius: 3rem;
+                        font-size: .625rem;
+                        font-weight: 500;
+                    }
+                }
+
+                .offerBody{
+                    padding: 1rem;
+                    .price{
+                        justify-content: space-between;
+                        h4{
+                            color: var(--BlackColor);
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                        }
+                        .status{
+                            padding: .313rem .625rem;
+                            color: var(--HoverColor);
+                            background: var(--GreyBg);
+                            font-size: .625rem;
+                            font-weight: 600;
+                            border-radius: 3rem;
+                        }
+                    }
+                    .amenities{
+                        width: 100%;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        padding: 1rem 0;
+                        gap: .5rem;
+                        .singleAmenities{
+                            padding: .313rem .625rem;
+                            border-radius: 5px;
+                            background: var(--GreyBg);
+                            gap: .5rem;
+                        }
+                    }
+    
+                    .btn{
+                        margin-top: 1rem;
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
+                        padding: .6rem;
+                        color: var(--WhiteColor);
+                        font-weight: 600;
+                        gap: .5rem;
+                        .icon{
+                            color: var(--WhiteColor);
+                        }
+                    }
+                }
+
+                &:hover{
+                    transform: translateY(-7px);
+                }
+            }
+        }
+    }
+}
