@@ -36,7 +36,7 @@ const Post = [
 
 export function Blog() {
   useEffect(() => {
-    Aos.init({duration: 2000, once: "true"})
+    Aos.init({duration: 2000, once: true})
   }, [])
 
   return (

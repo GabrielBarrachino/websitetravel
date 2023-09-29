@@ -37,7 +37,7 @@ const Offer = [
 
 export function Offers() {
   useEffect(() => {
-    Aos.init({duration: 2000, once: "true"})
+    Aos.init({duration: 2000, once: true})
   }, [])
 
   return (
