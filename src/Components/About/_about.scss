@@ -76,3 +76,36 @@
         }
     }
 }
+
+@media screen and (min-width: 720px){
+    .about{
+        .secContainer{
+            .videoCard{
+                .cardContent{
+                    gap: 4rem;
+                    padding: 4rem 3rem;
+                    grid-template-columns: repeat(2, 1fr);
+                    .cardText{
+                        h2{
+                            font-size: 2rem;
+                        }
+                        p{
+                            font-size: 0.938rem;
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .about{
+        .secContainer{
+            .mainContent{
+                padding: 2.5rem 0;
+            }
+        }
+    }
+}

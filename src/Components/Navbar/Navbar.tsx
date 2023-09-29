@@ -43,7 +43,7 @@ export function Navbar() {
             </li>
 
             <li onClick={removeNav} className="navItem">
-              <a href="#" className='navLink'>Resources</a>
+              <a href="#offers" className='navLink'>Resources</a>
             </li>
 
             <li onClick={removeNav} className="navItem">
@@ -51,7 +51,7 @@ export function Navbar() {
             </li>
 
             <li onClick={removeNav} className="navItem">
-              <a href="#" className='navLink'>Blog</a>
+              <a href="#blog" className='navLink'>Blog</a>
             </li>
 
             <div className="headerBtns flex">

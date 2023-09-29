@@ -7,6 +7,9 @@ import imgAngkorWat from '../../assets/imgAngkorWat.jpg'
 import imgTaj from '../../assets/imgTajMahal.jpg'
 import imgMachu from '../../assets/imgMachuPicchu.jpg'
 import imgBahia from '../../assets/imgBahia.jpg'
+import { useEffect } from "react"
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 export function Popular() {
   const Data = [
@@ -54,57 +57,61 @@ export function Popular() {
     },
   ]
 
-    return (
-      <section className="popular section container" id='popular'>
-        <div className="secContainer">
-          <div className="secHeader flex">
-              <div className="textDiv">
-                <h2 className="secTitle">Popular Destination</h2>
-                <p>From historical cities to natural the specteculars, come see the best of the world!</p>
-              </div>
+  useEffect(() => {
+    Aos.init({duration: 2000, once: "true"})
+  }, [])
 
-              <div className="iconsDiv flex">
-                <BsArrowLeftShort className='icon leftIcon'/>
-                <BsArrowRightShort className='icon'/>
-              </div>
-          </div>
+  return (
+    <section className="popular section container" id='popular'>
+      <div className="secContainer">
+        <div className="secHeader flex">
+            <div className="textDiv" data-aos='fade-right' data-aos-duration='2500'>
+              <h2 className="secTitle">Popular Destination</h2>
+              <p>From historical cities to natural the specteculars, come see the best of the world!</p>
+            </div>
 
-          <div className="mainContent grid">
-            {
-              Data.map(({ id, imgSrc, desTitle, location}) => {
-                return(
-                  <div className="singleDestination">
-                    <div className="destImage">
-                      <img src={imgSrc} alt="Image Title" />
-                      <div className="overlayInfo">
+            <div className="iconsDiv flex" data-aos='fade-left' data-aos-duration='2500'>
+              <BsArrowLeftShort className='icon leftIcon'/>
+              <BsArrowRightShort className='icon'/>
+            </div>
+        </div>
 
-                        <h3>{desTitle}</h3>
-                        <p>{location}</p>
+        <div className="mainContent grid" data-aos='fade-up' >
+          {
+            Data.map(({ id, imgSrc, desTitle, location}) => {
+              return(
+                <div className="singleDestination">
+                  <div className="destImage">
+                    <img src={imgSrc} alt="Image Title" />
+                    <div className="overlayInfo">
 
-                        <BsArrowRightShort className='icon'/>
-                      </div>
-                    </div>
+                      <h3>{desTitle}</h3>
+                      <p>{location}</p>
 
-                    <div className="destFooter">
-                      <div className="number">0{id}</div>
-
-                      <div className="destText flex">
-                        <h6>{location}</h6>
-                        <span className="flex">
-                          <span className="dot">
-                            <BsDot className='icon'/>
-                          </span>
-                          Dot
-                        </span>
-                      </div>
+                      <BsArrowRightShort className='icon'/>
                     </div>
                   </div>
-                )
-              })
-            }
-          </div>
+
+                  <div className="destFooter">
+                    <div className="number">0{id}</div>
+
+                    <div className="destText flex">
+                      <h6>{location}</h6>
+                      <span className="flex">
+                        <span className="dot">
+                          <BsDot className='icon'/>
+                        </span>
+                        Dot
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )
+}
   
